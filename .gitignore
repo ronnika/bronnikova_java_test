@@ -1,0 +1,20 @@
+target/
+build/
+!**/src/main/**
+!**/src/test/**
+!build/libs/test_aston-1.0.jar
+
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### Allure ###
+.allure
+
+### Gradle ###
+.gradle
+
+
