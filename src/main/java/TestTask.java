@@ -35,25 +35,6 @@ public class TestTask {
         }
     }
 
-    private void task3()  {
-        System.out.println("Task 3. Введите массив целых чисел через запятую");
-        Scanner scan = new Scanner(System.in);
-        String lines = scan.nextLine()
-                .replaceAll("\\[", "")
-                .replaceAll("]", "")
-                .replaceAll("\\{", "")
-                .replaceAll("}", "");
-        try {
-            Arrays.stream(lines.split(","))
-                    .map(String::trim)
-                    .mapToInt(Integer::parseInt)
-                    .filter(i -> i % 3 == 0)
-                    .forEach(x -> System.out.printf("%s ", x));
-        } catch (NumberFormatException e) {
-            wrongFormat();
-        }
-    }
-
     private void task1() {
         System.out.println("Task 1. Введите номер");
         Scanner scan = new Scanner(System.in);
@@ -74,6 +55,25 @@ public class TestTask {
             System.out.println("Привет, " + correctName);
         } else {
             System.out.println("Нет такого имени");
+        }
+    }
+
+    private void task3()  {
+        System.out.println("Task 3. Введите массив целых чисел через запятую");
+        Scanner scan = new Scanner(System.in);
+        String lines = scan.nextLine()
+                .replaceAll("\\[", "")
+                .replaceAll("]", "")
+                .replaceAll("\\{", "")
+                .replaceAll("}", "");
+        try {
+            Arrays.stream(lines.split(","))
+                    .map(String::trim)
+                    .mapToInt(Integer::parseInt)
+                    .filter(i -> i % 3 == 0)
+                    .forEach(x -> System.out.printf("%s ", x));
+        } catch (NumberFormatException e) {
+            wrongFormat();
         }
     }
 
