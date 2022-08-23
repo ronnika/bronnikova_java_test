@@ -3,8 +3,6 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class TestTask {
-    private String correctName = "Вячеслав";
-
     void run() {
         Scanner scan = new Scanner(System.in);
         while (true) {
@@ -51,6 +49,7 @@ public class TestTask {
         System.out.println("Task 2. Введите имя");
         Scanner scan = new Scanner(System.in);
         String name = scan.nextLine().strip();
+        String correctName = "Вячеслав";
         if (name.equalsIgnoreCase(correctName)) {
             System.out.println("Привет, " + correctName);
         } else {
